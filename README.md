@@ -77,6 +77,17 @@ I couldn't find a way to pass the project name to the sbt command, hence the use
 
 ### Change build.sbt
 
+The generated structure is just a basic Hello World application which isn't entirely what we want.  So the 
+build.sbt file and the director structure had to be modified a bit.
+
+
+### Create IntelliJ Project
+
+The easiest way I found to do this was import the build.sbt and IntelliJ figures things out from there and 
+uses a Java SDK to run a version of Scala and SBT that the IDE itself downloads.
+
+Importing the project (and downloading all the dependencies) takes quite a few minutes.
+
 
 
 ## Task
