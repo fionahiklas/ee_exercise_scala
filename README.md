@@ -89,6 +89,18 @@ uses a Java SDK to run a version of Scala and SBT that the IDE itself downloads.
 Importing the project (and downloading all the dependencies) takes quite a few minutes.
 
 
+## Helpful Hints
+
+### Scala underscore
+
+Scala is weird!  I had to use the following syntax to get a reference to a function
+
+```
+val functionToTest = fizzBuzz.divideByThreeTest _
+```
+
+There is some explanation of this and [other underscore uses](http://ananthakumaran.in/2010/03/29/scala-underscore-magic.html) but more detail and information is needed.
+
 
 ## Task
 
