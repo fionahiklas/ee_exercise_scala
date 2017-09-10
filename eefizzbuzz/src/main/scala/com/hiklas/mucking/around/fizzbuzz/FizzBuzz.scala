@@ -1,9 +1,15 @@
-package example
+package com.hiklas.mucking.around.fizzbuzz
 
-object Hello extends Greeting with App {
-  println(greeting)
+object FizzBuzz extends App {
+  println("FizzBuzz main code")
 }
 
-trait Greeting {
-  lazy val greeting: String = "hello"
+class FizzBuzz
+{
+  def divideByThreeTest(numberToTest: Int): Option[String] =
+  {
+    None
+  }
 }
+
+

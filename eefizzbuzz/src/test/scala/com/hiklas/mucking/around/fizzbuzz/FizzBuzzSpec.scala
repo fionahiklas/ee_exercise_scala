@@ -1,9 +1,20 @@
-package example
+package com.hiklas.mucking.around.fizzbuzz
 
 import org.scalatest._
 
-class HelloSpec extends FlatSpec with Matchers {
-  "The Hello object" should "say hello" in {
-    Hello.greeting shouldEqual "hello"
+class FizzBuzzSpec extends FlatSpec with Matchers {
+
+  def fixture = new {
+    val fizzbuzzToTest = new FizzBuzz()
+  }
+
+  "Divide by three function" should "exist" in {
+    val fix = fixture
+    val fizzBuzz = fix.fizzbuzzToTest
+
+    val functionToTest = fizzBuzz.divideByThreeTest _
+
+    assert(functionToTest != null)
+
   }
 }
