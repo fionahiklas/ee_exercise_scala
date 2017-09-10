@@ -57,6 +57,25 @@ export PATH=$PATH:/opt/sbt
 ```
 
 
+## Project Setup
+
+### Creating Template
+
+I needed a basic build.sbt file for the project, according to the 
+[sbt documentation](http://www.scala-sbt.org/0.13/docs/Hello.html)
+the following command should do the trick
+
+```
+echo "eefizzbuzz" | sbt new scala/scala-seed.g8
+```
+
+Technically the docs refer to [sbt/scala-seed.g8](https://github.com/sbt/scala-seed.g8) but this is forked from 
+the [scala-seed.g8](https://github.com/scala/scala-seed.g8) repo
+
+I couldn't find a way to pass the project name to the sbt command, hence the use of echo - bit of a hack.
+
+
+### Change build.sbt
 
 
 
