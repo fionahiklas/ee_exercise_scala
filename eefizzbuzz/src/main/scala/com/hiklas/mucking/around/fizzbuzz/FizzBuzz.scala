@@ -6,14 +6,19 @@ object FizzBuzz extends App {
 
 class FizzBuzz
 {
+  def divideByNumberTest(numberToTest: Int, divisor: Int): Boolean =
+  {
+    numberToTest != 0 && ( numberToTest % divisor) == 0
+  }
+
   def divideByThreeTest(numberToTest: Int): Boolean =
   {
-    numberToTest != 0 && ( numberToTest % 3) == 0
+    divideByNumberTest(numberToTest, 3)
   }
 
   def divideByFiveTest(numberToTest: Int): Boolean =
   {
-    numberToTest != 0 && ( numberToTest % 5) == 0
+    divideByNumberTest(numberToTest, 5);
   }
 
 

@@ -8,21 +8,31 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
     val fizzbuzzToTest = new FizzBuzz()
   }
 
-  "Divide by three function" should "exist" in {
+  "Divide by a number function" should  "return false for 0, 3"  in {
     val fizzBuzz = fixture.fizzbuzzToTest
 
-    val functionToTest = fizzBuzz.divideByThreeTest _
-
-    assert(functionToTest != null)
+    assert( fizzBuzz.divideByNumberTest(0, 3) == false )
   }
 
-  it should "return false for 0"  in {
+  it should "return true for 15, 5"  in {
     val fizzBuzz = fixture.fizzbuzzToTest
 
-    assert( fizzBuzz.divideByThreeTest(0) == false )
+    assert( fizzBuzz.divideByNumberTest(15,5) == true)
   }
 
-  it should "return true for 3"  in {
+  it should "return true for 15, 3"  in {
+    val fizzBuzz = fixture.fizzbuzzToTest
+
+    assert( fizzBuzz.divideByNumberTest(15,3) == true)
+  }
+
+  it should "return false for 10, 3"  in {
+    val fizzBuzz = fixture.fizzbuzzToTest
+
+    assert( fizzBuzz.divideByNumberTest(10,3) == false)
+  }
+
+  "Divide by three function" should  "return true for 3"  in {
     val fizzBuzz = fixture.fizzbuzzToTest
 
     assert( fizzBuzz.divideByThreeTest(3) == true )
@@ -34,21 +44,15 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
     assert( fizzBuzz.divideByThreeTest(15) == true)
   }
 
-  "Divide by five function" should "exist" in {
+  it should  "return false for 0"  in {
     val fizzBuzz = fixture.fizzbuzzToTest
 
-    val functionToTest = fizzBuzz.divideByFiveTest _
-
-    assert(functionToTest != null)
+    assert( fizzBuzz.divideByThreeTest(0) == false )
   }
 
-  it should "return false for 0"  in {
-    val fizzBuzz = fixture.fizzbuzzToTest
 
-    assert( fizzBuzz.divideByFiveTest(0) == false )
-  }
 
-  it should "return true for 5"  in {
+  "Divide by five function" should  "return true for 5"  in {
     val fizzBuzz = fixture.fizzbuzzToTest
 
     assert( fizzBuzz.divideByFiveTest(5) == true )
@@ -60,6 +64,11 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
     assert( fizzBuzz.divideByFiveTest(15) == true)
   }
 
+  it should  "return false for 0"  in {
+    val fizzBuzz = fixture.fizzbuzzToTest
+
+    assert( fizzBuzz.divideByThreeTest(0) == false )
+  }
 
 
 }
