@@ -46,5 +46,27 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
     assert( fizzBuzz.divideByThreeTest(0) == false )
   }
 
+  "Contains digit three" should "return false for 0" in {
+    val fizzBuzz = fixture.fizzbuzzToTest
 
+    assert( fizzBuzz.containsDigitThree(0) == false )
+  }
+
+  it should "return true for 13" in {
+    val fizzBuzz = fixture.fizzbuzzToTest
+
+    assert( fizzBuzz.containsDigitThree(13) == true )
+  }
+
+  it should "return false for 12" in {
+    val fizzBuzz = fixture.fizzbuzzToTest
+
+    assert( fizzBuzz.containsDigitThree(12) == false )
+  }
+
+  it should "return true for 33" in {
+    val fizzBuzz = fixture.fizzbuzzToTest
+
+    assert( fizzBuzz.containsDigitThree(33) == true )
+  }
 }

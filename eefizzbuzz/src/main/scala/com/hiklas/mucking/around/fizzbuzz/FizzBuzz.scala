@@ -16,6 +16,12 @@ class FizzBuzz
     divideByNumberTest(numberToTest, 5);
   }
 
+  def containsDigitThree(numberToTest: Int): Boolean =
+  {
+    numberToTest.toString().contains("3")
+  }
+
+
   /**
     * Check that the given numberToTest can be divided equally by the divisor.
     * If the number to test is zero return false also - normally the
