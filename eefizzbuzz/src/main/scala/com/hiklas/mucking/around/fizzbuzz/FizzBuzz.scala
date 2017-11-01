@@ -6,6 +6,41 @@ object FizzBuzz extends App {
 
 class FizzBuzz
 {
+
+  /**
+    * Takes a single integer and figures out whether to leave it as a number,
+    * or convert it to fizz, buzz, or luck.
+    *
+    * @param numberToTest
+    * @return String output for the number
+    */
+  def checkOneNumber(numberToTest: Int): String =
+  {
+    if( containsDigitThree(numberToTest) )
+    {
+      return "luck"
+    }
+
+    if( divideByThreeTest(numberToTest) && divideByFiveTest(numberToTest) )
+    {
+      return "fizzbuzz"
+    }
+
+    if( divideByThreeTest(numberToTest) )
+    {
+      return "fizz"
+    }
+
+    if( divideByFiveTest(numberToTest) )
+    {
+      return "buzz"
+    }
+
+    // Default
+    numberToTest.toString
+  }
+
+
   def divideByThreeTest(numberToTest: Int): Boolean =
   {
     divideByNumberTest(numberToTest, 3)
@@ -13,9 +48,17 @@ class FizzBuzz
 
   def divideByFiveTest(numberToTest: Int): Boolean =
   {
-    divideByNumberTest(numberToTest, 5);
+    divideByNumberTest(numberToTest, 5)
   }
 
+  /**
+    * Check if the number contains a '3' digit
+    *
+    * TODO: This does not handle nulls very well!
+    *
+    * @param numberToTest
+    * @return
+    */
   def containsDigitThree(numberToTest: Int): Boolean =
   {
     numberToTest.toString().contains("3")
