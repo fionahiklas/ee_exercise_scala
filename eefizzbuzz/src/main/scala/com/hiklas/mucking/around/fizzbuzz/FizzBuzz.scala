@@ -41,12 +41,12 @@ class FizzBuzz
   }
 
 
-  def divideByThreeTest(numberToTest: Int): Boolean =
+  private def divideByThreeTest(numberToTest: Int): Boolean =
   {
     divideByNumberTest(numberToTest, 3)
   }
 
-  def divideByFiveTest(numberToTest: Int): Boolean =
+  private def divideByFiveTest(numberToTest: Int): Boolean =
   {
     divideByNumberTest(numberToTest, 5)
   }
@@ -59,7 +59,7 @@ class FizzBuzz
     * @param numberToTest
     * @return
     */
-  def containsDigitThree(numberToTest: Int): Boolean =
+  private def containsDigitThree(numberToTest: Int): Boolean =
   {
     numberToTest.toString().contains("3")
   }
