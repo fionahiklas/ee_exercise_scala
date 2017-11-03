@@ -56,4 +56,25 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
     assert( result == (136,26,10042,56,111))
   }
 
+
+  "Check processAndSumList" should "return empty list and all zeros for sum for empty list input" in {
+    val fizzBuzz = fixture.fizzbuzzToTest
+
+    val (list, totals) = fizzBuzz.processAndSumList(List[Int]())
+    assert( list == List[String]() )
+    assert( totals == (0,0,0,0,0) )
+  }
+
+  it should "return one list item and simple totals for one input item" in {
+    val fizzBuzz = fixture.fizzbuzzToTest
+
+    val testList = 2 :: Nil
+    val (list, totals) = fizzBuzz.processAndSumList(testList)
+
+    assert( list == "2" :: Nil )
+    assert( totals == (0,0,0,0,1) )
+  }
+
+
+
 }
