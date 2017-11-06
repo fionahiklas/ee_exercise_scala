@@ -47,7 +47,7 @@ class FizzBuzz
     {
       val resultString = checkOneNumber(listToProcess.head)
 
-      return ( resultString :: Nil, OutputCounter(0,0,0,0,1))
+      return ( resultString :: Nil, countOutput(resultString) )
     }
     else
     {
@@ -75,7 +75,6 @@ class FizzBuzz
     {
       OutputCounter(0,0,0,0,0)
     }
-
   }
 
   /**
