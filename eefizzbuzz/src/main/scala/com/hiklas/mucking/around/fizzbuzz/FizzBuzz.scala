@@ -59,9 +59,23 @@ class FizzBuzz
   }
 
 
-  def countOutput(): OutputCounter =
+  def countOutput(outputToCount: String): OutputCounter =
   {
-    OutputCounter(0,0,0,0,0)
+    if(outputToCount != "")
+    {
+      outputToCount match {
+        case "fizz" => OutputCounter(1, 0, 0, 0, 0)
+        case "buzz" => OutputCounter(0, 1, 0, 0, 0)
+        case "fizzbuzz" => OutputCounter(0, 0, 1, 0, 0)
+        case "luck" => OutputCounter(0, 0, 0, 1, 0)
+        case _ => OutputCounter(0, 0, 0, 0, 1)
+      }
+    }
+    else
+    {
+      OutputCounter(0,0,0,0,0)
+    }
+
   }
 
   /**
