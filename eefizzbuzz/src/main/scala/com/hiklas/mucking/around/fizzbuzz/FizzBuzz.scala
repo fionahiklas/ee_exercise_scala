@@ -43,20 +43,18 @@ class FizzBuzz
       return ( List[String](), OutputCounter(0,0,0,0,0) )
     }
 
+    val resultStringForHead = checkOneNumber(listToProcess.head)
+    val resultCountForHead = countOutput(resultStringForHead)
+
     if ( listToProcess.tail == Nil)
     {
-      val resultString = checkOneNumber(listToProcess.head)
-
-      return ( resultString :: Nil, countOutput(resultString) )
+      return ( resultStringForHead :: Nil, resultCountForHead )
     }
     else
     {
-      val resultForHead = checkOneNumber(listToProcess.head)
-      val countForHead = countOutput(resultForHead)
+      val ( resultListForTail, resultCountForTail ) = processAndSumList(listToProcess.tail)
 
-      val ( resultForTail, countForTail ) = processAndSumList(listToProcess.tail)
-
-      return (  resultForHead ::  resultForTail, countForHead + countForTail)
+      return (  resultStringForHead ::  resultListForTail, resultCountForHead + resultCountForTail)
     }
   }
 
