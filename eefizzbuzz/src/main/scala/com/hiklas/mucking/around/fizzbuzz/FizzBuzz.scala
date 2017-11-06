@@ -51,11 +51,13 @@ class FizzBuzz
     }
     else
     {
+      val resultForHead = checkOneNumber(listToProcess.head)
+      val countForHead = countOutput(resultForHead)
 
+      val ( resultForTail, countForTail ) = processAndSumList(listToProcess.tail)
+
+      return (  resultForHead ::  resultForTail, countForHead + countForTail)
     }
-
-    // TODO: Just dummy data
-    ( List[String](), OutputCounter(255,255,255,255,255) )
   }
 
 

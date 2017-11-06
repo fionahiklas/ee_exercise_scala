@@ -59,6 +59,16 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
     assert( totals == FizzBuzz.OutputCounter(0,0,0,0,1) )
   }
 
+  it should "return two items and totals for two input items" in {
+    val fizzBuzz = fixture.fizzbuzzToTest
+
+    val testList = 2 :: 9 :: Nil
+    val (list, totals) = fizzBuzz.processAndSumList(testList)
+
+    assert( list == "2" :: "fizz" :: Nil )
+    assert( totals == FizzBuzz.OutputCounter(1,0,0,0,1) )
+  }
+
 
   "Count output" should "return all zeros for an empty string" in {
     val fizzBuzz = fixture.fizzbuzzToTest
