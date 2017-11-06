@@ -61,7 +61,7 @@ class FizzBuzz
   }
 
 
-  def countOutput(outputToCount: String): OutputCounter =
+  private def countOutput(outputToCount: String): OutputCounter =
   {
     if(outputToCount != "")
     {
@@ -86,7 +86,7 @@ class FizzBuzz
     * @param numberToTest
     * @return String output for the number
     */
-  def checkOneNumber(numberToTest: Int): String =
+  private def checkOneNumber(numberToTest: Int): String =
   {
     if( containsDigitThree(numberToTest) )
     {
