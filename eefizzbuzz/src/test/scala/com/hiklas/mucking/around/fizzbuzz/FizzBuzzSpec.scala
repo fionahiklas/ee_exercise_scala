@@ -40,10 +40,8 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
   it should "return 20 items and totals for numbers 1-20" in {
     val fizzBuzz = fixture.fizzbuzzToTest
 
-    // TODO: There *has* to be a better way to create these list but I don't
-    // TODO: currently know what it is!
-    val testList = 1 :: 2 :: 3 :: 4 :: 5 :: 6 :: 7 :: 8 :: 9 :: 10 :: 11 :: 12 :: 13 :: 14 :: 15 :: 16 :: 17 :: 18 :: 19 :: 20 :: Nil
-    val expectedList = "1" :: "2" :: "luck" :: "4" :: "buzz" :: "fizz" :: "7" :: "8" :: "fizz" :: "buzz" :: "11" :: "fizz" :: "luck" :: "14" :: "fizzbuzz" :: "16" :: "17" :: "fizz" :: "19" :: "buzz" :: Nil
+    val testList:List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+    val expectedList:List[String] = List("1", "2", "luck", "4", "buzz", "fizz", "7", "8", "fizz", "buzz", "11", "fizz", "luck", "14", "fizzbuzz", "16", "17", "fizz", "19", "buzz" )
 
     val (list, totals) = fizzBuzz.processAndSumList(testList)
 
